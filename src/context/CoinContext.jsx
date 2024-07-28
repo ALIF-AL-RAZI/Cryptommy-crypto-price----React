@@ -23,10 +23,12 @@ const CoinContextProvider = (props) =>{
 
     useEffect(()=>{
         fetchAllCoin();
-    },[currency])
+    },[currency]);
+
     const contextValue ={
         allCoin, currency, setCurrency
-    }
+    };
+    
     return (
         <CoinContext.Provider value={contextValue}>
             {props.children}
